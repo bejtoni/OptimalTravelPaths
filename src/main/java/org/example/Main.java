@@ -8,10 +8,16 @@ public class Main {
         loadPlaces();
         loadConstraints();
 
-        Graph graph1 = createGraph("src/main/resources/simple.txt");
+        //Graph graph1 = createGraph("src/main/resources/simple.txt");
+        //Graph graph2 = createGraph("src/main/resources/five_places.txt");
+        //Graph graph3 = createGraph("src/main/resources/ten_places.txt");
+        //Graph graph4 = createGraph("src/main/resources/all_places_a.txt");
+        Graph graph5 = createGraph("src/main/resources/all_places_b.txt");
+        //Graph graph6 = createGraph("src/main/resources/complex.txt");
 
 
-        Dijkstra.findShortestPaths(graph1);
+
+        Dijkstra.findShortestPaths(graph5);
     }
 
 

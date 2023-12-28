@@ -4,12 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Node {
-    private final String name;
+    private final String shortName;
     private final String fullName;
     private Map<Node, Integer> nodeNeighboursMap = new HashMap<>();
 
     public Node(String name){
-        this.name = name;
+        this.shortName = name;
         this.fullName = getFullNameFromPlaces(name);
     }
 
@@ -28,16 +28,20 @@ public class Node {
         return Places.getAllPlacesMap().get(shortcode);
     }
 
-    public String getName() {
+    public String getFullName() {
         return fullName;
     }
 
+    public String getShortName() {
+        return shortName;
+    }
+
     public void printNeighbours() {
-        System.out.println("Neighbours of Node " + name + ":");
+        System.out.println("Neighbours of Node " + shortName + ":");
         for (Map.Entry<Node, Integer> entry : nodeNeighboursMap.entrySet()) {
             Node neighbour = entry.getKey();
             Integer weight = entry.getValue();
-            System.out.println("Neighbour Name: " + neighbour.getName() + ", Weight: " + weight);
+            System.out.println("Neighbour Name: " + neighbour.getShortName() + ", Weight: " + weight);
         }
     }
 }

@@ -4,6 +4,8 @@ import java.util.*;
 
 public class Dijkstra {
     public static void findShortestPaths(Graph graph) {
+        applyConstraints(graph, Constraints.getAllConstraints());
+
         Map<String, Node> nodes = graph.getNodesInTheGraphMap();
 
         for (Node startNode : nodes.values()) {
@@ -33,9 +35,16 @@ public class Dijkstra {
             for (Node node : nodes.values()) {
                 if (!node.equals(startNode)) {
                     Node target = node;
+                    String startFullName = startNode.getFullName();
+                    String targetFullName = target.getFullName();
                     int optimalTime = (distance.containsKey(target) && distance.get(target) >= 0) ? distance.get(target) : -1;
-                    System.out.println(startNode.getName() + " -> " + target.getName() +
-                            ": " + optimalTime);
+
+                    System.out.println(
+                            (startFullName != null ? startFullName : startNode.getShortName()) +
+                                    " -> " +
+                                    (targetFullName != null ? targetFullName : target.getShortName()) +
+                                    ": " + optimalTime
+                    );
                 }
             }
         }
@@ -100,17 +109,29 @@ public class Dijkstra {
         Collections.reverse(path);
 
         for (Node node : path) {
-            System.out.print(node.getName() + " ");
+            System.out.print(node.getFullName() + " ");
         }
         System.out.println();
     }
 
     public static void applyConstraints(Graph graph, List<Constraints> constraints) {
+        double globalRandomValue = Math.random(); // Generate a single random value
+
         for (Constraints constraint : constraints) {
-            double randomValue = Math.random();
-            System.out.println("!" + randomValue + "!");
-            if (randomValue < constraint.getProbability()) {
-                graph.disableEdge(constraint.getStartShortcode(), constraint.getEndShortcode());
+            String startShortcode = constraint.getStartShortcode();
+            String endShortcode = constraint.getEndShortcode();
+
+            // Check if the nodes for constraints exist in the graph
+            Node startNode = graph.getNodesInTheGraphMap().get(startShortcode);
+            Node endNode = graph.getNodesInTheGraphMap().get(endShortcode);
+
+            if (startNode != null && endNode != null) {
+                if (globalRandomValue > constraint.getProbability()) {
+                    System.out.println("Constraint applied between " +
+                            startShortcode + " and " + endShortcode +
+                            " with probability " + constraint.getProbability() + " -> " + globalRandomValue);
+                    graph.disableEdge(startShortcode, endShortcode);
+                }
             }
         }
     }

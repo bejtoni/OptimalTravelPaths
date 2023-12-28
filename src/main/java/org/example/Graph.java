@@ -36,7 +36,7 @@ public class Graph {
         for (Map.Entry<String, Node> entry : nodesInTheGraphMap.entrySet()) {
             String nodeShortcode = entry.getKey();
             Node node = entry.getValue();
-            System.out.println("Node Shortcode: " + nodeShortcode + ", Node Name: " + node.getName());
+            System.out.println("Node Shortcode: " + nodeShortcode + ", Node Name: " + node.getFullName());
         }
     }
 }
