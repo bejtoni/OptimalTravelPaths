@@ -1,7 +1,6 @@
 package org.example;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Node {
     private final String shortName;
@@ -36,12 +35,12 @@ public class Node {
         return shortName;
     }
 
-    public void printNeighbours() {
+    /*public void printNeighbours() {
         System.out.println("Neighbours of Node " + shortName + ":");
         for (Map.Entry<Node, Integer> entry : nodeNeighboursMap.entrySet()) {
             Node neighbour = entry.getKey();
             Integer weight = entry.getValue();
             System.out.println("Neighbour Name: " + neighbour.getShortName() + ", Weight: " + weight);
         }
-    }
+    }*/
 }

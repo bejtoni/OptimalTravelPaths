@@ -1,7 +1,7 @@
 package org.example;
 
 import java.io.File;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class Main {
         //Graph graph2 = createGraph("src/main/resources/five_places.txt");
         //Graph graph3 = createGraph("src/main/resources/ten_places.txt");
         //Graph graph4 = createGraph("src/main/resources/all_places_a.txt");
-        Graph graph5 = createGraph("src/main/resources/all_places_b.txt");
+        //Graph graph5 = createGraph("src/main/resources/all_places_b.txt");
         //Graph graph6 = createGraph("src/main/resources/complex.txt");
 
 

@@ -1,6 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Constraints {
     private final String startShortcode;
