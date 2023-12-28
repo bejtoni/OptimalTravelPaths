@@ -14,8 +14,8 @@ public class Graph {
         Node end = nodesInTheGraphMap.computeIfAbsent(endShortCode, Node::new);
 
         start.addNeighbour(end, weight);
-        nodesInTheGraphMap.put(startShortcode, start);  // Ensure the start node is in the map
-        nodesInTheGraphMap.put(endShortCode, end);      // Ensure the end node is in the map
+        nodesInTheGraphMap.put(startShortcode, start);
+        nodesInTheGraphMap.put(endShortCode, end);
     }
 
 
