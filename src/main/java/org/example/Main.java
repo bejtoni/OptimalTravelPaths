@@ -8,16 +8,19 @@ public class Main {
         loadPlaces();
         loadConstraints();
 
-        //Graph graph1 = createGraph("src/main/resources/simple.txt");
-        //Graph graph2 = createGraph("src/main/resources/five_places.txt");
-        //Graph graph3 = createGraph("src/main/resources/ten_places.txt");
-        //Graph graph4 = createGraph("src/main/resources/all_places_a.txt");
-        //Graph graph5 = createGraph("src/main/resources/all_places_b.txt");
-        //Graph graph6 = createGraph("src/main/resources/complex.txt");
+        Graph graph1 = createGraph("src/main/resources/simple.txt");
+        Graph graph2 = createGraph("src/main/resources/five_places.txt");
+        Graph graph3 = createGraph("src/main/resources/ten_places.txt");
+        Graph graph4 = createGraph("src/main/resources/all_places_a.txt");
+        Graph graph5 = createGraph("src/main/resources/all_places_b.txt");
+        Graph graph6 = createGraph("src/main/resources/complex.txt");
 
-
-
-        Dijkstra.findShortestPaths(graph5);
+        Dijkstra.findShortestPaths(graph1, "Simple.txt");
+        Dijkstra.findShortestPaths(graph2, "Five places.txt");
+        Dijkstra.findShortestPaths(graph3, "Ten places.txt");
+        Dijkstra.findShortestPaths(graph4, "All places A.txt");
+        Dijkstra.findShortestPaths(graph5, "All places B.txt");
+        Dijkstra.findShortestPaths(graph6, "Complex.txt");
     }
 
 

@@ -5,7 +5,7 @@ import java.util.*;
 public class Constraints {
     private final String startShortcode;
     private final String endShortcode;
-    private final String constraintName;
+    private final String constraintType;
     private final Double probability;
 
     private static final ArrayList<Constraints> allConstraints = new ArrayList<>();
@@ -14,7 +14,7 @@ public class Constraints {
     public Constraints(String startShortcode, String endShortcode, String constraintName, Double probability) {
         this.startShortcode = startShortcode;
         this.endShortcode = endShortcode;
-        this.constraintName = constraintName;
+        this.constraintType = constraintName;
         this.probability = probability;
 
         allConstraints.add(this);
@@ -32,8 +32,8 @@ public class Constraints {
         return endShortcode;
     }
 
-    public String getConstraintName() {
-        return constraintName;
+    public String getConstraintType() {
+        return constraintType;
     }
 
     public double getProbability() {
