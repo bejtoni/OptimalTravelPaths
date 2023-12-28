@@ -17,6 +17,9 @@ public class Node {
         nodeNeighboursMap.put(end, weight);
     }
 
+    public void disableNeighbour(Node neighbour) {
+        nodeNeighboursMap.remove(neighbour);
+    }
     public Map<Node, Integer> getNodeNeighboursMap() {
         return nodeNeighboursMap;
     }

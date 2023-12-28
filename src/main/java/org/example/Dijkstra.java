@@ -104,4 +104,14 @@ public class Dijkstra {
         }
         System.out.println();
     }
+
+    public static void applyConstraints(Graph graph, List<Constraints> constraints) {
+        for (Constraints constraint : constraints) {
+            double randomValue = Math.random();
+            System.out.println("!" + randomValue + "!");
+            if (randomValue < constraint.getProbability()) {
+                graph.disableEdge(constraint.getStartShortcode(), constraint.getEndShortcode());
+            }
+        }
+    }
 }

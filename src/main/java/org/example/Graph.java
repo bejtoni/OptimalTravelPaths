@@ -9,7 +9,7 @@ public class Graph {
         this.nodesInTheGraphMap = new HashMap<>();
     }
 
-    public void addLine(String startShortcode, String endShortCode, Integer weight) {
+    public void addEdge(String startShortcode, String endShortCode, Integer weight) {
         Node start = nodesInTheGraphMap.computeIfAbsent(startShortcode, Node::new);
         Node end = nodesInTheGraphMap.computeIfAbsent(endShortCode, Node::new);
 
@@ -18,6 +18,14 @@ public class Graph {
         nodesInTheGraphMap.put(endShortCode, end);
     }
 
+    public void disableEdge(String startShortcode, String endShortcode) {
+        Node start = nodesInTheGraphMap.get(startShortcode);
+        Node end = nodesInTheGraphMap.get(endShortcode);
+
+        if (start != null && end != null) {
+            start.disableNeighbour(end);
+        }
+    }
 
     public Map<String, Node> getNodesInTheGraphMap() {
         return nodesInTheGraphMap;

@@ -5,14 +5,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //Popuni mjesta shodno pocetnom slovu i full names
-        fillAllPlaces();
+        loadPlaces();
+        loadConstraints();
 
-        Graph graph1 = createGraph("src/main/resources/ten_places.txt");
+        Graph graph1 = createGraph("src/main/resources/simple.txt");
 
 
         Dijkstra.findShortestPaths(graph1);
     }
+
 
     private static Graph createGraph(String filePath) {
         Graph graph = new Graph();
@@ -28,7 +29,7 @@ public class Main {
                 String endShortCode = lineParts[1].trim();
                 Integer weight = Integer.parseInt(lineParts[2].trim());
 
-                graph.addLine(startShortcode, endShortCode, weight);
+                graph.addEdge(startShortcode, endShortCode, weight);
             }
             s.close();
         }catch (Exception e){
@@ -37,7 +38,30 @@ public class Main {
         return graph;
     }
 
-    private static void fillAllPlaces() {
+    private static void loadConstraints() {
+        File input = new File("src/main/resources/constraints.txt");
+
+        try {
+            Scanner s = new Scanner(input);
+            if(s.hasNextLine())s.nextLine();
+
+            while (s.hasNextLine()){
+                String currentLine = s.nextLine();
+                String[] lineParts = currentLine.split(",");
+
+                String placeA = lineParts[0].trim();
+                String placeB = lineParts[1].trim();
+                String constraintType = lineParts[2].trim();
+                Double probability = Double.parseDouble(lineParts[3].trim());
+
+                Constraints constraint = new Constraints(placeA, placeB, constraintType, probability);
+            }
+            s.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    private static void loadPlaces() {
         File input = new File("src/main/resources/places.txt");
 
         try {
