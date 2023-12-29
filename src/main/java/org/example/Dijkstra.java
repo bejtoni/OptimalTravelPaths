@@ -70,8 +70,8 @@ public class Dijkstra {
     }
 
     public static List<String> applyConstraints(Graph graph, List<Constraints> constraints) {
-        //double globalRandomValue = Math.random();
-        double globalRandomValue = 1;
+        double globalRandomValue = Math.random();
+        //double globalRandomValue = 1;
 
         List<String> appliedConstraints = new ArrayList<>();
 
