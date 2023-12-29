@@ -8,7 +8,7 @@ public class Constraints {
     private final String constraintType;
     private final Double probability;
 
-    private static final ArrayList<Constraints> allConstraints = new ArrayList<>();
+    private static List<Constraints> allConstraints = new ArrayList<>();
 
 
     public Constraints(String startShortcode, String endShortcode, String constraintName, Double probability) {
@@ -20,7 +20,7 @@ public class Constraints {
         allConstraints.add(this);
     }
 
-    public static ArrayList<Constraints> getAllConstraints() {
+    public static List<Constraints> getAllConstraints() {
         return allConstraints;
     }
 

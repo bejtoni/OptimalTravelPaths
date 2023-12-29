@@ -70,7 +70,7 @@ public class Main {
             e.printStackTrace();
         }
     }
-    private static void loadPlaces() {
+    public static void loadPlaces() {
         File input = new File("src/main/resources/places.txt");
 
         try {

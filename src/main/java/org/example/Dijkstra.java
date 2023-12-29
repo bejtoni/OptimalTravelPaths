@@ -70,8 +70,8 @@ public class Dijkstra {
     }
 
     public static List<String> applyConstraints(Graph graph, List<Constraints> constraints) {
-        double globalRandomValue = Math.random();
-        //double globalRandomValue = 1;
+        //double globalRandomValue = Math.random();
+        double globalRandomValue = 1;
 
         List<String> appliedConstraints = new ArrayList<>();
 
@@ -83,7 +83,7 @@ public class Dijkstra {
             Node endNode = graph.getNodesInTheGraphMap().get(endShortcode);
 
             if (startNode != null && endNode != null) {
-                if (globalRandomValue > constraint.getProbability()) {
+                if (globalRandomValue >= constraint.getProbability()) {
                     graph.disableEdge(startShortcode, endShortcode);
                     appliedConstraints.add(startShortcode + " " + endShortcode + " " + constraint.getConstraintType() + " " + constraint.getProbability());
                 }
@@ -93,16 +93,10 @@ public class Dijkstra {
         return appliedConstraints;
     }
 
-    /*public static void findShortestPath(Graph graph, String startShortcode, String endShortcode) {
+    public static int findShortestPath(Graph graph, String startShortcode, String endShortcode, List<Constraints> constraints) {
         Map<String, Node> nodes = graph.getNodesInTheGraphMap();
-
         Node startNode = nodes.get(startShortcode.toUpperCase());
         Node endNode = nodes.get(endShortcode.toUpperCase());
-
-        if (startNode == null || endNode == null) {
-            System.out.println("Invalid start or end node.");
-            return;
-        }
 
         Map<Node, Integer> distance = new HashMap<>();
         Map<Node, Node> previous = new HashMap<>();
@@ -119,7 +113,13 @@ public class Dijkstra {
                 Node neighbour = entry.getKey();
                 int newDist = distance.get(currentNode) + entry.getValue();
 
-                if (newDist >= 0 && (distance.get(neighbour) == null || newDist < distance.get(neighbour))) {
+                // Check if there is a constraint disabling the edge
+                boolean edgeDisabled = constraints.stream()
+                        .anyMatch(c -> c.getStartShortcode().equals(currentNode.getShortName())
+                                && c.getEndShortcode().equals(neighbour.getShortName())
+                                && Math.random() <= c.getProbability());
+
+                if (!edgeDisabled && (newDist >= 0 && (distance.get(neighbour) == null || newDist < distance.get(neighbour)))) {
                     distance.put(neighbour, newDist);
                     previous.put(neighbour, currentNode);
                     pq.add(new NodeDistance(currentNode, neighbour, newDist));
@@ -127,11 +127,12 @@ public class Dijkstra {
             }
         }
 
-        int optimalTime = (distance.containsKey(endNode) && distance.get(endNode) >= 0) ? distance.get(endNode) : -1;
+        return distance.getOrDefault(endNode, -1);
+    }
 
-        String startFullName = Places.getAllPlacesMap().get(startShortcode);
-        String endFullName = Places.getAllPlacesMap().get(endShortcode);
 
-        System.out.println(startFullName + " -> " + endFullName + ": " + optimalTime);
-    }*/
+
+
+
+
 }
