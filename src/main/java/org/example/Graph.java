@@ -27,6 +27,13 @@ public class Graph {
         return nodesInTheGraphMap;
     }
 
+    public boolean edgeExists(String startShortcode, String endShortcode) {
+        Node startNode = nodesInTheGraphMap.get(startShortcode);
+        Node endNode = nodesInTheGraphMap.get(endShortcode);
+
+        return startNode != null && endNode != null && startNode.getNodeNeighboursMap().containsKey(endNode);
+    }
+
     /*public void printNodes() {
         System.out.println("Nodes in the Graph:");
         for (Map.Entry<String, Node> entry : nodesInTheGraphMap.entrySet()) {

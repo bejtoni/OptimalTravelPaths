@@ -1,0 +1,213 @@
+Applied constraints: 
+K L foggy 0.4
+
+Alipašino -> Baščaršija: 70
+Alipašino -> Ciglane: 78
+Alipašino -> Doglodi: 36
+Alipašino -> Energoinvest Stup: 53
+Alipašino -> Ferhadija: 20
+Alipašino -> Grdonj: 147
+Alipašino -> Hrid: 117
+Alipašino -> Ilidža: 97
+Alipašino -> Jarčedole: 50
+Alipašino -> Krivoglavci: 47
+Alipašino -> Lužani: 77
+Alipašino -> Marijin Dvor: 46
+Alipašino -> Novi Grad: 64
+Alipašino -> Otoka: 32
+Baščaršija -> Alipašino: 130
+Baščaršija -> Ciglane: 42
+Baščaršija -> Doglodi: 101
+Baščaršija -> Energoinvest Stup: 2
+Baščaršija -> Ferhadija: 85
+Baščaršija -> Grdonj: 115
+Baščaršija -> Hrid: 131
+Baščaršija -> Ilidža: 60
+Baščaršija -> Jarčedole: 13
+Baščaršija -> Krivoglavci: 59
+Baščaršija -> Lužani: 82
+Baščaršija -> Marijin Dvor: 81
+Baščaršija -> Novi Grad: 97
+Baščaršija -> Otoka: 97
+Ciglane -> Alipašino: 164
+Ciglane -> Baščaršija: 99
+Ciglane -> Doglodi: 82
+Ciglane -> Energoinvest Stup: 99
+Ciglane -> Ferhadija: 66
+Ciglane -> Grdonj: 193
+Ciglane -> Hrid: 163
+Ciglane -> Ilidža: 143
+Ciglane -> Jarčedole: 96
+Ciglane -> Krivoglavci: 93
+Ciglane -> Lužani: 123
+Ciglane -> Marijin Dvor: 92
+Ciglane -> Novi Grad: 110
+Ciglane -> Otoka: 78
+Doglodi -> Alipašino: 175
+Doglodi -> Baščaršija: 45
+Doglodi -> Ciglane: 42
+Doglodi -> Energoinvest Stup: 47
+Doglodi -> Ferhadija: 108
+Doglodi -> Grdonj: 160
+Doglodi -> Hrid: 176
+Doglodi -> Ilidža: 105
+Doglodi -> Jarčedole: 58
+Doglodi -> Krivoglavci: 104
+Doglodi -> Lužani: 127
+Doglodi -> Marijin Dvor: 125
+Doglodi -> Novi Grad: 95
+Doglodi -> Otoka: 90
+Energoinvest Stup -> Alipašino: 128
+Energoinvest Stup -> Baščaršija: 66
+Energoinvest Stup -> Ciglane: 40
+Energoinvest Stup -> Doglodi: 99
+Energoinvest Stup -> Ferhadija: 83
+Energoinvest Stup -> Grdonj: 113
+Energoinvest Stup -> Hrid: 129
+Energoinvest Stup -> Ilidža: 58
+Energoinvest Stup -> Jarčedole: 11
+Energoinvest Stup -> Krivoglavci: 57
+Energoinvest Stup -> Lužani: 80
+Energoinvest Stup -> Marijin Dvor: 79
+Energoinvest Stup -> Novi Grad: 127
+Energoinvest Stup -> Otoka: 95
+Ferhadija -> Alipašino: 98
+Ferhadija -> Baščaršija: 50
+Ferhadija -> Ciglane: 58
+Ferhadija -> Doglodi: 16
+Ferhadija -> Energoinvest Stup: 33
+Ferhadija -> Grdonj: 127
+Ferhadija -> Hrid: 97
+Ferhadija -> Ilidža: 77
+Ferhadija -> Jarčedole: 30
+Ferhadija -> Krivoglavci: 27
+Ferhadija -> Lužani: 57
+Ferhadija -> Marijin Dvor: 26
+Ferhadija -> Novi Grad: 44
+Ferhadija -> Otoka: 12
+Grdonj -> Alipašino: 166
+Grdonj -> Baščaršija: 77
+Grdonj -> Ciglane: 51
+Grdonj -> Doglodi: 61
+Grdonj -> Energoinvest Stup: 79
+Grdonj -> Ferhadija: 83
+Grdonj -> Hrid: 16
+Grdonj -> Ilidža: 125
+Grdonj -> Jarčedole: 90
+Grdonj -> Krivoglavci: 95
+Grdonj -> Lužani: 102
+Grdonj -> Marijin Dvor: 92
+Grdonj -> Novi Grad: 71
+Grdonj -> Otoka: 57
+Hrid -> Alipašino: 158
+Hrid -> Baščaršija: 107
+Hrid -> Ciglane: 35
+Hrid -> Doglodi: 83
+Hrid -> Energoinvest Stup: 93
+Hrid -> Ferhadija: 67
+Hrid -> Grdonj: 30
+Hrid -> Ilidža: 137
+Hrid -> Jarčedole: 90
+Hrid -> Krivoglavci: 87
+Hrid -> Lužani: 124
+Hrid -> Marijin Dvor: 93
+Hrid -> Novi Grad: 101
+Hrid -> Otoka: 79
+Ilidža -> Alipašino: 138
+Ilidža -> Baščaršija: 8
+Ilidža -> Ciglane: 50
+Ilidža -> Doglodi: 67
+Ilidža -> Energoinvest Stup: 10
+Ilidža -> Ferhadija: 93
+Ilidža -> Grdonj: 55
+Ilidža -> Hrid: 71
+Ilidža -> Jarčedole: 21
+Ilidža -> Krivoglavci: 67
+Ilidža -> Lužani: 22
+Ilidža -> Marijin Dvor: 89
+Ilidža -> Novi Grad: 95
+Ilidža -> Otoka: 63
+Jarčedole -> Alipašino: 131
+Jarčedole -> Baščaršija: 55
+Jarčedole -> Ciglane: 43
+Jarčedole -> Doglodi: 88
+Jarčedole -> Energoinvest Stup: 3
+Jarčedole -> Ferhadija: 72
+Jarčedole -> Grdonj: 102
+Jarčedole -> Hrid: 118
+Jarčedole -> Ilidža: 47
+Jarčedole -> Krivoglavci: 60
+Jarčedole -> Lužani: 69
+Jarčedole -> Marijin Dvor: 68
+Jarčedole -> Novi Grad: 116
+Jarčedole -> Otoka: 84
+Krivoglavci -> Alipašino: 71
+Krivoglavci -> Baščaršija: 58
+Krivoglavci -> Ciglane: 46
+Krivoglavci -> Doglodi: 91
+Krivoglavci -> Energoinvest Stup: 6
+Krivoglavci -> Ferhadija: 75
+Krivoglavci -> Grdonj: 105
+Krivoglavci -> Hrid: 121
+Krivoglavci -> Ilidža: 50
+Krivoglavci -> Jarčedole: 3
+Krivoglavci -> Lužani: 72
+Krivoglavci -> Marijin Dvor: 71
+Krivoglavci -> Novi Grad: 119
+Krivoglavci -> Otoka: 87
+Lužani -> Alipašino: -1
+Lužani -> Baščaršija: -1
+Lužani -> Ciglane: -1
+Lužani -> Doglodi: -1
+Lužani -> Energoinvest Stup: -1
+Lužani -> Ferhadija: -1
+Lužani -> Grdonj: -1
+Lužani -> Hrid: -1
+Lužani -> Ilidža: -1
+Lužani -> Jarčedole: -1
+Lužani -> Krivoglavci: -1
+Lužani -> Marijin Dvor: -1
+Lužani -> Novi Grad: -1
+Lužani -> Otoka: -1
+Marijin Dvor -> Alipašino: 227
+Marijin Dvor -> Baščaršija: 97
+Marijin Dvor -> Ciglane: 139
+Marijin Dvor -> Doglodi: 198
+Marijin Dvor -> Energoinvest Stup: 99
+Marijin Dvor -> Ferhadija: 182
+Marijin Dvor -> Grdonj: 212
+Marijin Dvor -> Hrid: 228
+Marijin Dvor -> Ilidža: 157
+Marijin Dvor -> Jarčedole: 110
+Marijin Dvor -> Krivoglavci: 156
+Marijin Dvor -> Lužani: 179
+Marijin Dvor -> Novi Grad: 194
+Marijin Dvor -> Otoka: 194
+Novi Grad -> Alipašino: 136
+Novi Grad -> Baščaršija: 6
+Novi Grad -> Ciglane: 48
+Novi Grad -> Doglodi: 107
+Novi Grad -> Energoinvest Stup: 8
+Novi Grad -> Ferhadija: 91
+Novi Grad -> Grdonj: 121
+Novi Grad -> Hrid: 137
+Novi Grad -> Ilidža: 66
+Novi Grad -> Jarčedole: 19
+Novi Grad -> Krivoglavci: 65
+Novi Grad -> Lužani: 88
+Novi Grad -> Marijin Dvor: 87
+Novi Grad -> Otoka: 103
+Otoka -> Alipašino: 109
+Otoka -> Baščaršija: 38
+Otoka -> Ciglane: 46
+Otoka -> Doglodi: 4
+Otoka -> Energoinvest Stup: 40
+Otoka -> Ferhadija: 112
+Otoka -> Grdonj: 123
+Otoka -> Hrid: 139
+Otoka -> Ilidža: 68
+Otoka -> Jarčedole: 41
+Otoka -> Krivoglavci: 38
+Otoka -> Lužani: 45
+Otoka -> Marijin Dvor: 35
+Otoka -> Novi Grad: 32

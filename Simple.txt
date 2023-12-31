@@ -1,0 +1,9 @@
+Applied constraints: 
+A B high constructions 0.2
+
+Alipašino -> Baščaršija: -1
+Alipašino -> Ciglane: -1
+Baščaršija -> Alipašino: 25
+Baščaršija -> Ciglane: 20
+Ciglane -> Alipašino: 5
+Ciglane -> Baščaršija: -1

@@ -36,10 +36,14 @@ public class Dijkstra {
 
                     for (Map.Entry<Node, Integer> entry : currentNode.getNodeNeighboursMap().entrySet()) {
                         Node neighbour = entry.getKey();
-
                         int newDist = distance.get(currentNode) + entry.getValue();
 
-                        if (newDist >= 0 && (distance.get(neighbour) == null || newDist < distance.get(neighbour))) {
+                        boolean edgeDisabled = Constraints.getAllConstraints().stream()
+                                .filter(c -> c.getStartShortcode().equals(currentNode.getShortName())
+                                        && c.getEndShortcode().equals(neighbour.getShortName()))
+                                .anyMatch(c -> Math.random() <= c.getProbability());
+
+                        if (!edgeDisabled && (newDist >= 0 && (distance.get(neighbour) == null || newDist < distance.get(neighbour)))) {
                             distance.put(neighbour, newDist);
                             previous.put(neighbour, currentNode);
                             pq.add(new NodeDistance(currentNode, neighbour, newDist));
@@ -69,10 +73,8 @@ public class Dijkstra {
         }
     }
 
-    public static List<String> applyConstraints(Graph graph, List<Constraints> constraints) {
-        double globalRandomValue = Math.random();
-        //double globalRandomValue = 1;
 
+    public static List<String> applyConstraints(Graph graph, List<Constraints> constraints) {
         List<String> appliedConstraints = new ArrayList<>();
 
         for (Constraints constraint : constraints) {
@@ -82,7 +84,10 @@ public class Dijkstra {
             Node startNode = graph.getNodesInTheGraphMap().get(startShortcode);
             Node endNode = graph.getNodesInTheGraphMap().get(endShortcode);
 
-            if (startNode != null && endNode != null) {
+            if (startNode != null && endNode != null && graph.edgeExists(startShortcode, endShortcode)) {
+                double globalRandomValue = Math.random();
+                //double globalRandomValue = 1;
+
                 if (globalRandomValue >= constraint.getProbability()) {
                     graph.disableEdge(startShortcode, endShortcode);
                     appliedConstraints.add(startShortcode + " " + endShortcode + " " + constraint.getConstraintType() + " " + constraint.getProbability());
@@ -92,6 +97,7 @@ public class Dijkstra {
 
         return appliedConstraints;
     }
+
 
     public static int findShortestPath(Graph graph, String startShortcode, String endShortcode, List<Constraints> constraints) {
         Map<String, Node> nodes = graph.getNodesInTheGraphMap();
@@ -126,13 +132,6 @@ public class Dijkstra {
                 }
             }
         }
-
         return distance.getOrDefault(endNode, -1);
     }
-
-
-
-
-
-
 }
